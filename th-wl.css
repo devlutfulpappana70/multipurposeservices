@@ -1,0 +1,16 @@
+.woosw-list table.woosw-items tr td {
+    padding: 20px;
+}
+.woosw-list table.woosw-items .woosw-item .woosw-item--name a {
+    font-size: 20px;
+    color: var(--title-color);
+}
+.woosw-list table.woosw-items .woosw-item .woosw-item--name a {
+    font-size: 20px;
+}
+.woosw-list table.woosw-items tr .woosw-item--actions {
+    width: 88px;
+}
+.woosw-list table.woosw-items .woosw-item .woosw-item--name a:hover {
+       color: var(--theme-color);
+}
