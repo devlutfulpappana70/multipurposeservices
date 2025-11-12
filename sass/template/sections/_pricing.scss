@@ -1,0 +1,273 @@
+/* Pricing 1 ---------------------------------- */
+.available-list {
+    padding-left: 30px;
+
+    @include xs {
+        padding: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        font-family: $title-font;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        padding-left: 30px;
+        margin-bottom: 4px;
+        text-transform: capitalize;
+        color: $title-color;
+
+        &:after {
+            content: "\f105";
+            font-family: var(--icon-font);
+            font-weight: 500;
+            background-color: $theme-color;
+            color: #F9E1E7;
+            font-weight: 900;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            border-radius: 50px;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+
+        &.unavailable {
+            &:after {
+                content: "\f00c";
+                right: 4px;
+                color: #E4E4E4;
+                font-weight: 400;
+            }
+        }
+
+        img {
+            max-width: 18px;
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.unavailable {
+            font-weight: 400;
+            color: $body-color;
+
+            img {
+                opacity: 0.2;
+            }
+        }
+    }
+
+}
+
+
+/* Price card start -------------------------*/
+.price-card {
+    position: relative;
+    background-color: #F9E1E7;
+    border-radius: 50px;
+    overflow: hidden;
+
+    &_wrapper {
+        &:nth-child(2) {
+            .price-card {
+                background-color: #F9E8D7;
+
+                .price-shape {
+                    background-color: #FBB040;
+                }
+
+                &_price {
+                    color: #FBB040;
+                }
+
+                .available-list {
+                    ul {
+                        li {
+                            &:after {
+                                color: #F9E8D7;
+                                background-color: #FBB040;
+                            }
+                        }
+                    }
+                }
+
+                .th-btn {
+                    background-color: #FBB040;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            .price-card {
+                background-color: #CFF4FB;
+
+                .price-shape {
+                    background-color: #16C4E3;
+                }
+
+                &_price {
+                    color: #16C4E3;
+                }
+
+                .available-list {
+                    ul {
+                        li {
+                            &:after {
+                                color: #CFF4FB;
+                                background-color: #16C4E3;
+                            }
+                        }
+                    }
+                }
+
+                .th-btn {
+                    background-color: #16C4E3;
+                }
+            }
+        }
+    }
+
+    &_title {
+        font-weight: 600;
+        font-size: 36px;
+        margin-top: -0.6rem;
+        margin-bottom: 20px;
+        color: $title-color;
+        text-align: center;
+
+        @include md {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &_wrapp {
+        position: relative;
+        padding: 50px 50px 0px 50px;
+
+        @include md {
+            padding: 30px 30px 0 30px;
+        }
+
+        .price-shape {
+            position: relative;
+            width: 438px;
+            height: 92px;
+            mask-size: auto;
+            background-size: auto;
+            background-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            background-position: top center;
+            background-color: $theme-color;
+            margin-left: -50px;
+            z-index: 1;
+
+            @include lg {
+                margin-left: -30px;
+            }
+            @include sm {
+                margin-left: 0px;
+                width: 100%;
+            }
+            @media(max-width: 480px) {
+                mask-size: 100%;
+            }
+        }
+
+        .price-shape2 {
+            position: relative;
+            width: 438px;
+            height: 92px;
+            mask-size: auto;
+            background-size: auto;
+            background-repeat:  repeat-x;
+            mask-repeat: no-repeat;
+            background-position: top center;
+            background-color: $white-color;
+            margin-top: -83px;
+            margin-left: -50px;
+            z-index: 0;
+
+            @include lg {
+                margin-left: -30px;
+            }
+            @include sm {
+                margin-left: 0px;
+                width: 100%;
+            }
+            @media(max-width: 480px) {
+                mask-size: 100%;
+            }
+        }
+    }
+
+    &_content {
+        padding: 20px 50px 50px 50px;
+
+        @include md {
+            padding: 20px 20px 30px 20px;
+        }
+
+        .available-list ul {
+            margin-top: -0.3rem;
+        }
+
+        .available-list {
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &_price {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 54px;
+        margin-bottom: 35px;
+        color: $theme-color;
+
+        @include lg {
+            font-size: 33px;
+            line-height: 44px;
+        }
+
+        .duration {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            color: $title-color;
+        }
+    }
+
+    &_text {
+        font-family: $title-font;
+        color: $body-color;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: -0.3rem;
+    }
+
+    .th-btn {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    &.active {}
+}
+
+/* Price card end -------------------------*/
